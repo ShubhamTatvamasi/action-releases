@@ -13,10 +13,11 @@ jobs:
       - run: pwd
       - run: ls
       - run: tree
+      - run: env
       - uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: ${{ steps.date.outputs.date }}
           prerelease: false
           files: |
-            new/folder/final*.txt
+            final*.txt
