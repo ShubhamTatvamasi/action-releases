@@ -19,4 +19,4 @@ jobs:
           automatic_release_tag: ${{ steps.date.outputs.date }}
           prerelease: false
           files: |
-            final*.txt
+            new/folder/final*.txt
