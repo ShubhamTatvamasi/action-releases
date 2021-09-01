@@ -11,6 +11,8 @@ jobs:
       - run: touch new/folder/final123.txt
       - run: cd new/folder
       - run: pwd
+      - run: ls
+      - run: tree
       - uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
