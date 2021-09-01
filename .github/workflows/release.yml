@@ -4,7 +4,7 @@ jobs:
   release:
     runs-on: "ubuntu-latest"
     steps:
-      - run: date +%m-%d-%Y--%H-%M-%S
+      - run: echo "::set-output name=date::$(date +'%m-%d-%Y--%H-%M-%S')"
         id: date
       - uses: actions/checkout@v2
       - uses: marvinpinto/action-automatic-releases@latest
